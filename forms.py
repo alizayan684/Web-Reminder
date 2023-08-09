@@ -1,8 +1,8 @@
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
-from flask import FlaskFrom
+from flask_wtf import FlaskForm
 
 
-class AddTask(FlaskFrom):
+class AddTask(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     submit = SubmitField('Submit')
