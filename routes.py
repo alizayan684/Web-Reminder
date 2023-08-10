@@ -3,6 +3,7 @@ from flask import render_template
 from app import app  # Our app.py file
 import forms
 
+
 @app.route('/')
 @app.route('/Home')
 def index():

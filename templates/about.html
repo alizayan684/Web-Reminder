@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 
 {% block main %}
-<p>some content on about</p>
+<p>some content on about page</p>
 <form action='post'>
     {{form.crfs_token}}
+    {{form.title.label}}
+    {{form.title}}
+    {{form.submit}}
 </form>
 {% endblock %}
