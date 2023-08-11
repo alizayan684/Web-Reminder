@@ -5,7 +5,18 @@ from app import creator
 
 
 class AddTask(FlaskForm):
-    title = StringField('write your info', validators=[DataRequired()])
-    submit = SubmitField('Submit')
+    title = StringField(validators=[DataRequired()])
+    submit = SubmitField('Add')
     creator()
+
+
+class EditTask(FlaskForm):
+    title = StringField(validators=[DataRequired()])
+    submit = SubmitField('Edit')
+    creator()
+
+
+class DeleteTask(FlaskForm):
+    submit = SubmitField('Delete')
+
 

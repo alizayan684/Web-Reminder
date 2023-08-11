@@ -1,11 +1,21 @@
 {% extends "base.html" %}
-
 {% block main %}
-<p>Welcome to your main page, home</p>
-<h1> Tasks </h1>
-<ul>
-    {% for task in tasks %}
-    <li>{{ task.title }} created on {{task.date}}</li>
-    {% endfor %}
-</ul>
+{%if tasks%}
+<h2>&emsp;Current tasks:</h2>
+{%else%}
+<br>
+<br>
+<h2>&emsp;Added tasks will appear here!</h2>
+{%endif%}
+  {% for task in tasks %}
+    <div class="card">
+      <div class="card-body">
+        <h3>{{ task.title }}</h3>
+        <p>Added on {{ task.date }}</p>
+        <p>{{ task.description }}</p>
+        <a href="{{url_for('edit', task_id=task.id)}}" class="btn btn-primary">Edit</a>
+        <a href="{{url_for('delete', task_id=task.id)}}" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  {% endfor %}
 {% endblock %}
