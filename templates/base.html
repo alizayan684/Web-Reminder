@@ -4,8 +4,8 @@
 <hr>
 <hr>
 <ul>
-  <li> <a href="Home">Home page</a> </li>
-  <li> <a href="About">About page</a> </li>
+  <li> <a href="{{ url_for('index') }}">Tasks</a> </li>
+  <li> <a href="{{ url_for('add') }}">add new</a> </li>
 </ul>
 {% block main %}
 {% endblock %}

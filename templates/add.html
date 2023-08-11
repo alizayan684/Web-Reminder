@@ -2,10 +2,13 @@
 
 {% block main %}
 <p>some content on about page</p>
-<form action='post'>
-    {{form.crfs_token}}
+<form action="{{ url_for('add')}}" method="post">
+    {{ form.csrf_token() }}
     {{form.title.label}}
     {{form.title}}
     {{form.submit}}
 </form>
+{% if title %}
+<h2>{{title}}</h2>
+{% endif %}
 {% endblock %}

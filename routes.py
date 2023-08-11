@@ -1,16 +1,23 @@
-from flask import render_template
-
-from app import app  # Our app.py file
+from flask import render_template, redirect, url_for
+from datetime import datetime
+from app import app, db  # Our app.py file
+from models import Task  # Our models.py file
 import forms
 
 
 @app.route('/')
-@app.route('/Home')
+@app.route('/index')
 def index():
-    return render_template('index.html')
+    tasks = Task.query.all()
+    return render_template('index.html', tasks=tasks)
 
 
-@app.route('/About')
-def about():
+@app.route('/add', methods=['GET', 'POST'])
+def add():
     form = forms.AddTask()
-    return render_template('about.html', form=form)
+    if form.validate_on_submit():
+        task = Task(title=form.title.data , date=datetime.utcnow())
+        db.session.add(task)
+        db.session.commit()
+        return redirect(url_for('index'))
+    return render_template('add.html', form=form)
