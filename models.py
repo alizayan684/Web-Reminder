@@ -7,4 +7,4 @@ class Task(db.Model):
     date = db.Column(db.Date, nullable=False)
 
     def __repr__(self):
-        return f'{self.title} made on {self.date}'
+        return f'{self.title} made on {self.date} at {self.time}'

@@ -54,3 +54,21 @@ def delete(task_id):
         return render_template('delete.html', form=form, task_id=task_id, title=task.title)
     flash(f'Task with id {task_id} does not exist.')
     return redirect(url_for('index'))
+
+
+@app.route('/delete_all', methods=['GET', 'POST'])
+def delete_all():
+    form = forms.DeleteAll()
+    tasks = Task.query.all()
+    if form.validate_on_submit():
+        if tasks:
+            num_rows_deleted = Task.query.delete()
+            db.session.commit()
+            if num_rows_deleted == 1:
+                flash(f'{num_rows_deleted} task deleted successfully!')
+            else:
+                flash(f'{num_rows_deleted} tasks deleted successfully!')
+            return redirect(url_for('index'))
+        flash('No tasks to delete yet!.')
+        return redirect(url_for('index'))
+    return render_template('delete_all.html', form=form)

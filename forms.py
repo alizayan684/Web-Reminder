@@ -20,3 +20,5 @@ class DeleteTask(FlaskForm):
     submit = SubmitField('Delete')
 
 
+class DeleteAll(FlaskForm):
+    submit = SubmitField('Yes, delete all')

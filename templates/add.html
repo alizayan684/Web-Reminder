@@ -5,7 +5,7 @@
   <form action="{{ url_for('add') }}" method="post">
     {{ form.csrf_token }}
     <div class="row">
-      <h3>Add Task:</h3>
+      <h3 style="color: #007900">Add Task:</h3>
       <div class="col">
         {{ form.title(class="form-control") }}
       </div>
