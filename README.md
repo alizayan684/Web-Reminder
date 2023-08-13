@@ -1,6 +1,10 @@
 # Web Task Manager App
 
-This is a web-based task manager application built using Python, Flask, HTML, and SQLAlchemy database. The app allows users to create, update, and delete tasks, as well as the date of creation or modification.
+This is a web-based task manager application built using Python, Flask, HTML, and SQLAlchemy database. The app allows users to create, update, and delete tasks, as well as the date of creation or modification.<br><br>
+<img src = "Screenshot 2023-08-13 021509.png" alt = "hi" title = "title" width = "700" align ="center"/>
+<br>
+<br>
+
 
 ## Prerequisites
 
