@@ -6,17 +6,14 @@ here is the home page:
 <hr>
 <br>
 <img src = "Screenshot 2023-08-13 021509.png" alt = "hi" title = "title" width = "700" align ="center"/>
-<br>
 <hr>
 Add Task Page:
 <hr>
 <img src = "Screenshot 2023-08-13 021623.png" alt = "hi" title = "title" width = "700" align ="center"/>
-<br>
 <hr>
 Delete all tasks Page:
 <hr>
 <img src = "Screenshot 2023-08-13 021705.png" alt = "hi" title = "title" width = "700" align ="center"/>
-<br>
 <hr>
 Home Page with added tasks:
 <hr>
