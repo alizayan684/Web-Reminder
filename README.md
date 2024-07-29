@@ -34,4 +34,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## Contact
 
 If you have any questions or need further assistance, please feel free to contact me at [Ali.Esmail03@eng-st.cu.edu.eg](mailto:Ali.Esmail03@eng-st.cu.edu.eg) or 
-[my LinkedIn profile](https://www.linkedin.com/in/ali-zayan-b98239264).
+[my LinkedIn profile](https://www.linkedin.com/in/%D8%B9%D9%84%D9%8A-%D8%B2%D9%8A%D8%A7%D9%86-%F0%9F%94%BB%F0%9F%87%B5%F0%9F%87%B8-b98239264).
